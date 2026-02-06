@@ -16,6 +16,8 @@ async function readHealthFile() {
     }
 }
 
-readHealthFile();
+(async () => {
+    await readHealthFile();
+})();
 
 module.exports = { readHealthFile };
