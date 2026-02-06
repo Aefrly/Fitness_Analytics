@@ -33,8 +33,6 @@ async function processWorkoutData() {
             totalMinutes += parseInt(workout.duration); 
         }
 
-        console.log(`Total workouts: ${totalWorkouts}`);
-        console.log(`Total minutes exercised: ${totalMinutes}`);
         return { totalWorkouts, totalMinutes };
     } catch (error) {
         if (error.code === 'ENOENT') {
@@ -44,9 +42,5 @@ async function processWorkoutData() {
         }
     }
 }
-
-(async () => {
-    await processWorkoutData();
-})();
 
 module.exports = { readWorkoutData, processWorkoutData };

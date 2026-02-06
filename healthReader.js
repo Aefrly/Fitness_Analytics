@@ -6,8 +6,6 @@ async function readHealthFile() {
     try {
         const data = await fs.readFile('./data/health-metrics.json', 'utf8');
         const healthData = JSON.parse(data);
-
-        console.log(`Total health entries: ${healthData.metrics.length}`);
         return healthData;
     } catch (error) {
         if (error.code === 'ENOENT') {
@@ -17,9 +15,5 @@ async function readHealthFile() {
         }
     }
 }
-
-(async () => {
-    await readHealthFile();
-})();
 
 module.exports = { readHealthFile };
