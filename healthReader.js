@@ -2,7 +2,7 @@ const fs = require('fs/promises');
 
 async function readHealthFile() {
     try {
-        const data = await fs.readFile('../data/health-metrics.json', 'utf8');
+        const data = await fs.readFile('./data/health-metrics.json', 'utf8');
         const healthData = JSON.parse(data);
 
         console.log(`Total health entries: ${healthData.length}`);
