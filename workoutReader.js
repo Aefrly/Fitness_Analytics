@@ -1,6 +1,7 @@
 const fs = require('fs');
 const csv = require('csv-parser');
 
+//Converting the CSV file into JSON information for me to process
 async function readWorkoutData() {
     return new Promise((resolve, reject) => {
         const results = [];
@@ -18,6 +19,9 @@ async function readWorkoutData() {
             });
     });
 }
+
+//Function to read CSV workout file and return total entries and duration of 
+// workout with error messages in case something goes wrong
 async function processWorkoutData() {
     try {
         const workoutData = await readWorkoutData(); 

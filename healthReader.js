@@ -1,5 +1,7 @@
 const fs = require('fs/promises');
 
+//Function to read JSON health file and return total entries with error 
+// messages in case something goes wrong
 async function readHealthFile() {
     try {
         const data = await fs.readFile('./data/health-metrics.json', 'utf8');
