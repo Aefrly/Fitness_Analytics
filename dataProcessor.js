@@ -25,7 +25,7 @@ async function processFiles() {
     // Workouts found: 10
     console.log(`Total workout minutes: ${workoutSummary.totalMinutes}`);
    // Total workout minutes: 330
-    console.log(`Health entries found: ${healthSummary.totalEntries}`);
+    console.log(`Health entries found: ${healthSummary.metrics.length}`);
     // Health entries found: 8
     console.log(`Weekly goal: ${weeklyGoal} minutes`);
     // Weekly goal: 150 minutes
