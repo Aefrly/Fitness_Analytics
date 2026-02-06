@@ -6,6 +6,7 @@ async function readHealthFile() {
         const healthData = JSON.parse(data);
 
         console.log('Total health entries: ' + healthData.length);
+        return healthData;
     } catch (error) {
         if (error.code === 'ENOENT') {
             console.log('Health data file not found.');
@@ -16,3 +17,5 @@ async function readHealthFile() {
 }
 
 readHealthFile();
+
+module.exports = { readHealthFile };
